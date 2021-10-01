@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using MentalMath.Models;
+using Newtonsoft.Json;
 namespace MentalMath
 {
     public partial class fingerDetection : System.Web.UI.Page
@@ -23,5 +24,26 @@ namespace MentalMath
             JavaScriptSerializer ser = new JavaScriptSerializer();
             hf.Value = ser.Serialize(quizlist);
         }
+
+        protected void result_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+            List<quizscore> qs = JsonConvert.DeserializeObject<List<quizscore>>(result.Value);
+            int score_count = 0;
+            foreach (var cor in qs)
+            {
+                if (cor.result == "True")
+                {
+
+                    score_count++;
+                }
+            }
+            Response.Redirect("Score.aspx/?s="+score_count+"&l="+qs.Count());
+
+        }
+        }
     }
-}
