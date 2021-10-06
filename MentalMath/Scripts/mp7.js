@@ -7,7 +7,7 @@ var check = true;
 const q = document.getElementById("hf");
 alert(q.value);
 const qbox = document.getElementById("Questions");
-
+var myTimer;
 const qobj = JSON.parse(q.value);
 
 const verifyans = document.getElementById("verifyans");
@@ -21,11 +21,7 @@ canvas.height = window.innerHeight / 1.5;
 var qcount = 0;
 var check_count = 0;
 
-qbox.textContent = qobj[qcount].question;
-
-
 var timeleft = 10;
-var myTimer = setInterval(timeCount, 1000);
 
 
 scores = []
@@ -118,6 +114,14 @@ function getCount(landmarks, isRightHand) {
 }
 
 function onResults(results) {
+    if (check) {
+        qbox.textContent = qobj[qcount].question
+        myTimer = setInterval(timeCount, 1000);
+        check = false;
+        var element = document.getElementById("loaddiv");
+        element.classList.add("hidden");
+    }
+    
     videoElement.width = 0;
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);

@@ -8,7 +8,7 @@ const unit = document.getElementById("unitImage");
 const ten = document.getElementById("tenImage");
 var qobj;
 const verifyans = document.getElementById("verifyans");
-
+var check = true;
 canvas.style.width = '100%';
 canvas.width = canvas.offsetWidth;
 canvas.height = window.innerHeight / 1.5;
@@ -90,6 +90,7 @@ function generate_random() {
 }
 
 function showHint() {
+    document.getElementById("overlay").style.display = "block";
     if (qobj.ans > 9) {
         ten.src = "/Content/Images/finger-counting-pics/" + parseInt(qobj.ans / 10).toString() + ".png";
         unit.src = "/Content/Images/finger-counting-pics/" + ((qobj.ans)%10).toString() + ".png";
@@ -99,8 +100,17 @@ function showHint() {
         unit.src = "/Content/Images/finger-counting-pics/" + qobj.ans.toString() + ".png";
     }
 }
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
 function onResults(results) {
-    qbox.textContent = qobj.qs;
+    if (check) {
+        qbox.textContent = qobj.qs;
+        check = false;
+        var element = document.getElementById("loaddiv");
+        element.classList.add("hidden");
+    }
+    
     videoElement.width = 0;
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -151,6 +161,7 @@ function onResults(results) {
             unit.src = "";
             ten.src = "";
             generate_random();
+            qbox.textContent = qobj.qs;
         }
     }
     var c = count_ten + count;

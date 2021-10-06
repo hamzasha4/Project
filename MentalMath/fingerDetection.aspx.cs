@@ -12,7 +12,6 @@ namespace MentalMath
 {
     public partial class fingerDetection : System.Web.UI.Page
     {
-        DatabaseDataContext db = new DatabaseDataContext();
         Quiz q = new Quiz();
         
         protected void Page_Load(object sender, EventArgs e)
@@ -48,9 +47,7 @@ namespace MentalMath
                 }
 
                 q.QuizScore = score_count.ToString();
-                q.CustomerID = 1;
-                db.Quizs.InsertOnSubmit(q);
-                db.SubmitChanges();
+            q.CustomerID = 1;
                 Response.Redirect("Score.aspx/?s=" + score_count + "&l=" + qs.Count());
             }
         }
