@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Database">
+  <DataContextMoniker Name="/DatabaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="15984fe2-c357-43a0-a6a7-1e5456d108fd" absoluteBounds="3.5, 3, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DatabaseDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="028183c4-fb97-4de8-a90f-8ad7b8794e00" absoluteBounds="3.515, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e32da1e-6aa4-4705-907e-5c483cc53997" absoluteBounds="6.875, 3.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DatabaseDataContext/Quiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3ec0bf2-c6a1-4714-abb9-03480802d5d0" absoluteBounds="6.89, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.81814697265625); (6.875 : 3.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/Customer/Customer_Quiz" />
+      <nodes>
+        <classShapeMoniker Id="15984fe2-c357-43a0-a6a7-1e5456d108fd" />
+        <classShapeMoniker Id="6e32da1e-6aa4-4705-907e-5c483cc53997" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

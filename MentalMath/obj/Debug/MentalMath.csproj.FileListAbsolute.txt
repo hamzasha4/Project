@@ -47,6 +47,7 @@ C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\bin\
 C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\obj\Debug\MentalMath.csprojResolveAssemblyReference.cache
 C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\obj\Debug\MentalMath.dll
 C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\obj\Debug\MentalMath.pdb
+C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\obj\Debug\MentalMath.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\Final Project\MentalMath\MentalMath\MentalMath\obj\Debug\MentalMath.csproj.CopyComplete

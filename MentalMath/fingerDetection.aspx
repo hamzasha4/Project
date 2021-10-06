@@ -28,11 +28,9 @@
         <br />
         <br />
         <asp:Button ID="submit" runat="server" ClientIDMode="Static" OnClick="submit_Click" Text="Button" />
-        
-
 
     </div>
   </div>
 </div> 
-    <script src="Scripts/mp6.js"></script>
+    <script src="Scripts/mp7.js"></script>
 </asp:Content>

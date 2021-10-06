@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -161,6 +164,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="App_Data\aspnet-MentalMath-20210920010840.mdf" />
+    <Content Include="App_Data\aspnet-MentalMath-20210920010840_log.ldf">
+      <DependentUpon>aspnet-MentalMath-20210920010840.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\MentalMath.mdf" />
     <Content Include="App_Data\MentalMath_log.ldf">
       <DependentUpon>MentalMath.mdf</DependentUpon>
@@ -189,16 +196,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Database.dbml.layout">
+      <DependentUpon>Database.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="page.html" />
-    <Content Include="page2.aspx" />
+    <Content Include="Practice.aspx" />
     <Content Include="Score.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\mp6.js" />
+    <Content Include="Scripts\mp7.js" />
+    <Content Include="Scripts\mp_practice.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -371,6 +386,11 @@
     <Compile Include="CP1.aspx.designer.cs">
       <DependentUpon>CP1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,12 +418,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\quiz.cs" />
     <Compile Include="Models\quizscore.cs" />
-    <Compile Include="page2.aspx.cs">
-      <DependentUpon>page2.aspx</DependentUpon>
+    <Compile Include="Practice.aspx.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="page2.aspx.designer.cs">
-      <DependentUpon>page2.aspx</DependentUpon>
+    <Compile Include="Practice.aspx.designer.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Score.aspx.cs">
@@ -436,7 +456,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

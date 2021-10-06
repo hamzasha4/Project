@@ -7,12 +7,17 @@ using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using MentalMath.Models;
 using Newtonsoft.Json;
+
 namespace MentalMath
 {
     public partial class fingerDetection : System.Web.UI.Page
     {
+        DatabaseDataContext db = new DatabaseDataContext();
+        Quiz q = new Quiz();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             List<quiz> quizlist = new List<quiz>() 
             { 
 
@@ -31,19 +36,24 @@ namespace MentalMath
         }
 
         protected void submit_Click(object sender, EventArgs e)
-        {
-            List<quizscore> qs = JsonConvert.DeserializeObject<List<quizscore>>(result.Value);
-            int score_count = 0;
-            foreach (var cor in qs)
-            {
-                if (cor.result == "True")
+
+        {       List<quizscore> qs = JsonConvert.DeserializeObject<List<quizscore>>(result.Value);
+                int score_count = 0;
+                foreach (var cor in qs)
                 {
-
-                    score_count++;
+                    if (cor.result == "True")
+                    {
+                        score_count++;
+                    }
                 }
-            }
-            Response.Redirect("Score.aspx/?s="+score_count+"&l="+qs.Count());
 
+                q.QuizScore = score_count.ToString();
+                q.CustomerID = 1;
+                db.Quizs.InsertOnSubmit(q);
+                db.SubmitChanges();
+                Response.Redirect("Score.aspx/?s=" + score_count + "&l=" + qs.Count());
+            }
         }
         }
-    }
+    
+
