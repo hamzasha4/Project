@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="KxpPXUULBRPZsjXwmo-O">
+    <mxGraphModel dx="1173" dy="579" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pT2myDEjgFokJkwGmvou-1" value="ServiceInitiator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="26" y="39" width="240" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=0;" parent="pT2myDEjgFokJkwGmvou-1" vertex="1">
+          <mxGeometry y="26" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-4" value="+ CheckServiceEnabled(): boolean&lt;div&gt;+ GetActiveDatabases : List&amp;lt;Databases&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rounded=0;" parent="pT2myDEjgFokJkwGmvou-1" vertex="1">
+          <mxGeometry y="34" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-5" value="DataSyncService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="26" y="154" width="247" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=0;" parent="pT2myDEjgFokJkwGmvou-5" vertex="1">
+          <mxGeometry y="26" width="247" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-8" value="+ GetDataFromQueue(): DataModel&lt;div&gt;+ HandleDataSyncing() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rounded=0;" parent="pT2myDEjgFokJkwGmvou-5" vertex="1">
+          <mxGeometry y="34" width="247" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-25" value="DataSyncHandlerfactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="355" y="163" width="234" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-27" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="pT2myDEjgFokJkwGmvou-25" vertex="1">
+          <mxGeometry y="26" width="234" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-28" value="+ GetDataHandler(type): IDataHandler" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="pT2myDEjgFokJkwGmvou-25" vertex="1">
+          <mxGeometry y="34" width="234" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-8" target="pT2myDEjgFokJkwGmvou-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-38" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IDataHandler&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ SyncData(): void&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="663" y="160.5" width="190" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-50" style="rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;" parent="1" source="pT2myDEjgFokJkwGmvou-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="741" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-39" value="&lt;b&gt;IMOLabDataHandler&lt;/b&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="355" y="366" width="136" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-40" value="&lt;b&gt;RadiologyDataHandler&lt;/b&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="676" y="366" width="143" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-49" style="rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=8 8;startArrow=none;startFill=0;targetPerimeterSpacing=0;sourcePerimeterSpacing=0;startSize=6;endSize=6;jumpStyle=line;flowAnimation=0;shadow=0;strokeColor=default;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="754" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-41" value="&lt;b&gt;MedicationDataHandler&lt;/b&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1014" y="366" width="156" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-47" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.444;entryY=0.981;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;dashed=1;dashPattern=8 8;" parent="1" source="pT2myDEjgFokJkwGmvou-40" target="pT2myDEjgFokJkwGmvou-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-52" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;" parent="1" source="pT2myDEjgFokJkwGmvou-28" target="pT2myDEjgFokJkwGmvou-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-83" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-71" target="pT2myDEjgFokJkwGmvou-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-71" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;IMOSFTPOutboundService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ PushDataToSFTP(): Type&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="334" y="481" width="178" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-74" target="pT2myDEjgFokJkwGmvou-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1144" y="474" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-74" target="pT2myDEjgFokJkwGmvou-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-74" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ELK Push Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ PushDataToELK(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="845" y="481" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-85" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-84" target="pT2myDEjgFokJkwGmvou-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-84" value="LabDataCreatorService" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="182" y="366" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pT2myDEjgFokJkwGmvou-86" target="pT2myDEjgFokJkwGmvou-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-86" value="RadiologyDataCreatorService" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="546" y="637" width="180" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-88" value="MedicationDataCreatorService" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1235" y="358.5" width="180" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="pT2myDEjgFokJkwGmvou-90" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.413;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pT2myDEjgFokJkwGmvou-88" target="pT2myDEjgFokJkwGmvou-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
